@@ -58,6 +58,7 @@ $positions: (("t", "top"), ("e", "right"), ("b", "bottom"), ("s", "left"));
   }
 }
 
+
 .fs {
   &-4xl {
     @include font-size(60px);
@@ -216,5 +217,5 @@ $positions: (("t", "top"), ("e", "right"), ("b", "bottom"), ("s", "left"));
 ul {
   list-style-type: none;
   padding: 0;
-  margin: 0 ;
+  margin: 0 -0.5em;
 }

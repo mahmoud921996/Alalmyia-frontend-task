@@ -6,22 +6,22 @@
       </NuxtLink>
       <nav>
         <ul class="d-flex justify-content-center align-items-center">
-          <li class="fs-md me-5">
-            <NuxtLink to="/"> Home </NuxtLink>
+          <li class="fs-md ">
+            <NuxtLink to="/"> الرئيسيه </NuxtLink>
           </li>
           <li class="fs-md me-5">
-            <NuxtLink to="/"> About Us </NuxtLink>
+            <NuxtLink to="/"> من نحن </NuxtLink>
           </li>
           <li class="fs-md me-5">
-            <NuxtLink to="/shop"> shop </NuxtLink>
+            <NuxtLink to="/shop"> تسوق الان </NuxtLink>
           </li>
           <li class="fs-md me-5">
-            <NuxtLink to="/"> Contact Us </NuxtLink>
+            <NuxtLink to="/"> اتصل بنا </NuxtLink>
           </li>
         </ul>
       </nav>
       <div class="icons d-flex">
-        <NuxtLink to="/signup" class="header-login me-5">Sign Up</NuxtLink>
+        <NuxtLink to="/signup" class="header-login me-5">تسجيل الدخول</NuxtLink>
         <ul class="d-flex align-items-center">
           <li class="me-3 pointer">
             <Icon name="bi:search" />
