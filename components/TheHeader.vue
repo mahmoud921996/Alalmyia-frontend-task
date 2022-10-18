@@ -6,7 +6,7 @@
       </NuxtLink>
       <nav>
         <ul class="d-flex justify-content-center align-items-center">
-          <li class="fs-md ">
+          <li class="fs-md">
             <NuxtLink to="/"> الرئيسيه </NuxtLink>
           </li>
           <li class="fs-md me-5">
@@ -47,8 +47,8 @@
   top: 0;
   left: 0;
   right: 0;
-  z-index: $zindex-fixed;
-
+  z-index: 100;
+  background-color: $white;
   &-container {
     height: $header-height;
     display: flex;
