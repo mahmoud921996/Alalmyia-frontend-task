@@ -30,34 +30,31 @@ $positions: (("t", "top"), ("e", "right"), ("b", "bottom"), ("s", "left"));
 @function sizeValue($key, $value) {
   @return if($key== "none", 0, $value + $sizeUnit);
 }
-[dir="ltr"] {
-  @each $size in $sizes {
-    $sizeKey: nth($size, 1);
-    $sizeValue: nth($size, 2);
+@each $size in $sizes {
+  $sizeKey: nth($size, 1);
+  $sizeValue: nth($size, 2);
 
-    .#{$marginKey}#{$separator}#{$sizeKey} {
-      @include margin($sizeValue);
+  .#{$marginKey}#{$separator}#{$sizeKey} {
+    @include margin($sizeValue);
+  }
+
+  .#{$paddingKey}#{$separator}#{$sizeKey} {
+    @include padding($sizeValue);
+  }
+
+  @each $position in $positions {
+    $posKey: nth($position, 1);
+    $posValue: nth($position, 2);
+
+    .#{$marginKey}#{$posKey}#{$separator}#{$sizeKey} {
+      @include rfs($sizeValue, margin-#{$posValue});
     }
 
-    .#{$paddingKey}#{$separator}#{$sizeKey} {
-      @include padding($sizeValue);
-    }
-
-    @each $position in $positions {
-      $posKey: nth($position, 1);
-      $posValue: nth($position, 2);
-
-      .#{$marginKey}#{$posKey}#{$separator}#{$sizeKey} {
-        @include rfs($sizeValue, margin-#{$posValue});
-      }
-
-      .#{$paddingKey}#{$posKey}#{$separator}#{$sizeKey} {
-        @include rfs($sizeValue, padding-#{$posValue});
-      }
+    .#{$paddingKey}#{$posKey}#{$separator}#{$sizeKey} {
+      @include rfs($sizeValue, padding-#{$posValue});
     }
   }
 }
-
 
 .fs {
   &-4xl {
@@ -199,9 +196,10 @@ $positions: (("t", "top"), ("e", "right"), ("b", "bottom"), ("s", "left"));
 }
 
 .line {
-  width: 100%;
+  width: 70%;
   height: 1px;
-  background: currentColor;
+ border-top: 2px dotted #ddd;
+ margin:0 auto;
 }
 
 @keyframes lds-dual-ring {
@@ -213,9 +211,13 @@ $positions: (("t", "top"), ("e", "right"), ("b", "bottom"), ("s", "left"));
   }
 }
 
-
 ul {
   list-style-type: none;
   padding: 0;
   margin: 0 -0.5em;
+}
+
+
+.load {
+  background-color: rgba($color: #000000, $alpha: 0.1);
 }

@@ -10,11 +10,15 @@ export default defineNuxtConfig({
       },
     },
   },
-    modules: ['nuxt-icon', "@pinia/nuxt"],
-    buildModules: ["@nuxtjs/google-fonts"],
-    googleFonts: {
-      families: {
-        "Montserrat": [300,400, 500,600, 700],
-      },
+  modules: ["nuxt-icon", "@pinia/nuxt", "@vueuse/nuxt"],
+  buildModules: ["@nuxtjs/google-fonts"],
+  publicRuntimeConfig: {
+    APP_BASE_URL: process.env.APP_BASE_URL || "http://localhost:3000",
+  },
+
+  googleFonts: {
+    families: {
+      Montserrat: [300, 400, 500, 600, 700],
     },
-})
+  },
+});

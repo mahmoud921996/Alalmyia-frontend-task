@@ -2,7 +2,7 @@
   <section class="banner">
     <div class="container-fluid">
       <div class="row">
-        <!-- <div class="col-md-1">
+        <div class="d-none d-md-block col-md-1">
           <div class="d-flex align-items-center justify-content-center h-100">
             <div class="icons d-flex flex-column">
               <NuxtLink class="mb-3">
@@ -16,11 +16,12 @@
               </NuxtLink>
             </div>
           </div>
-        </div> -->
-        <div
-          class="col-md-12 img-box"
-          :style="{ backgroundImage: 'url(' + banner + ')' }"
-        ></div>
+        </div>
+        <div class="col-md-11 px-0">
+          <div class="img-box">
+            <img :src="banner" class="w-100" />
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -35,9 +36,6 @@ export default {
 section {
   .img-box {
     position: relative;
-    height: calc(100vh - 100px);
-    background-position: center;
-    background-size: cover;
 
     &::before {
       content: "";

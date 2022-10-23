@@ -1,0 +1,35 @@
+import { defineStore } from "pinia";
+
+export const useCart = defineStore("cart", {
+  state() {
+    return {
+      cart: [],
+    };
+  },
+  actions:{
+     addCart(payload:{id , product , amount}){
+            const tempItem = this.cart.find(item => item.id === id);
+            if(tempItem){
+                const tempCart = this.cart.map(cartItem => {
+                    if(cartItem.id === id){
+                        let newAmount = cartItem.amount + amount;
+                        return {...cartItem , amount:newAmount}
+                    }else{
+                        return cartItem
+                    }
+                    this.cart = tempCart
+                })
+            }else{
+                const newItem:CartItem={
+                    id:id,
+                    title:product.name,
+                    price:product.price,
+                    category : product.category_name,
+                    image:product.main_image,
+                    amount:amount
+                }
+            this.cart.push(newItem)
+            }
+        }
+  }
+});

@@ -1,18 +1,45 @@
-// $themeColor: $black;
-// @import "swiper/scss";
-// @import "swiper/scss/navigation";
-// @import "swiper/scss/pagination";
+$themeColor: $black;
+@import "swiper/scss";
+@import "swiper/scss/navigation";
+@import "swiper/scss/pagination";
 // @import "swiper/scss/mousewheel";
 // @import "swiper/scss/free-mode";
 // @import "swiper/scss/keyboard";
 
-// .swiper-pagination-progressbar {
-//   height: rem(10px) !important;
-//   background: none !important;
-// }
-// .swiper-button-disabled {
-//   visibility: hidden;
-// }
-// .swiper-slide {
-//   height: auto;
-// }
+.swiper-pagination-progressbar {
+  height: rem(10px) !important;
+  background: none !important;
+}
+.swiper-button-disabled {
+  visibility: hidden;
+}
+.swiper-slide {
+  height: auto;
+}
+
+.swiper{
+    position: static;
+}
+
+.swiper-button-next, .swiper-rtl .swiper-button-prev {
+    right: -20px;
+
+    @include media-breakpoint-down(lg) {
+      display: none;
+    }
+  }
+
+.swiper-button-prev, .swiper-rtl .swiper-button-next{
+    left: -15px;
+    @include media-breakpoint-down(lg) {
+      display: none;
+    }
+}
+
+
+.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after 
+,
+.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after
+{
+  font-size: 2.5rem;
+}
