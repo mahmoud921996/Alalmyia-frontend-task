@@ -12,16 +12,14 @@
     </div>
 
     <h4 class="fw-black">مرحبا</h4>
-    <p class="text-capitalize fs-md">
-      من فضلك اختر طريقه للحصول علي حسابك
-    </p>
+    <p class="text-capitalize fs-md">من فضلك اختر طريقه للحصول علي حسابك</p>
     <Button @click="login">تسجيل الدخول </Button>
     <p class="text-capitalize fs-md">
       ليس لديك جساب؟
       <NuxtLink to="/auth/register" class="fw-black">تسجيل حساب</NuxtLink>
     </p>
     <div class="padge">
-      <img src="~/public/images/Group 17334.png" class="padge-img" />
+      <img src="~/public/images/padge.png" class="padge-img" />
     </div>
     <div class="circle-bottom">
       <img src="~/public/images/freepik--floor--inject-42.png" />
